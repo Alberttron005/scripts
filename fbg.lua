@@ -112,3 +112,8 @@ game:GetService("ReplicatedStorage").Replicator:InvokeServer("FruitsHandler","Sw
 end})
 
 
+--anti afk
+for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Idled)) do
+   v:Disable()
+end
+
