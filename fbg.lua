@@ -35,7 +35,17 @@ spawn(function()
 game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer("TSRubber","JetPistol",{})
 game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer("TSRubber","JetGatling",{})
 game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer("TSRubber","RedHawk",{})
-game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer("TSRubber","GrizzlyMagnum",{})
+
+
+
+
+game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer("TSRubber","GrizzlyMagnum",{
+        ["MouseRay"] = {
+["Normal"] = Vector3.new(-235.6920928955078, 80.28042602539062, -167.34483337402344),
+["Direction"] = Vector3.new(235.6920928955078, -80.28042602539062, 167.34483337402344),
+["Origin"] = Vector3.new(795.3841552734375, 635.2388305664062, -410.2130126953125),
+["Position"] = Vector3.new(1031.0762939453125, 554.9583740234375, -242.86817932128906)}})
+
 end
 end
 end)
@@ -65,7 +75,7 @@ spawn(function()
         if library.flags["Dragon"] then 
 game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer("Dragon","Screech",{})
 game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer("Dragon","DragonClaw",{})
-game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer("Dragon","Screech",{})
+game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer("Dragon","DragonBreath",{})
 game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer("Dragon","DracoMeteor",{})
 game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer("Dragon","CrimsonBomb", {
 ["MouseRay"] = {
