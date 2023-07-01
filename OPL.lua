@@ -100,3 +100,12 @@ Part.Material = Enum.Material.Plastic
 Part.Size = Vector3.new(15, 1, 15)
 Part.CFrame = CFrame.new(197793.969, 20003.6099, 192644.969)
 Part.Parent = workspace
+
+
+local RunService = game:GetService("RunService")
+function antiSit()
+if game.Players.LocalPlayer.Character.Humanoid:GetState() == Enum.HumanoidStateType.Seated then 
+game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end
+end
+RunService:BindToRenderStep("tempBinding", 1000, antiSit)
