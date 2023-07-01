@@ -13,13 +13,12 @@ Name = "General"
 })
 
 idk:AddToggle({
-Name = "auto tp",
+Name = "weapon",
 Flag = "Autode"
 })
 spawn(function()
     while wait(0.1) do
         if library.flags["Autode"] then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(197793.969, 20007.1035, 192644.969)
     for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
         if v.name == "Cannon Ball" then
             v.Parent = game.Players.LocalPlayer.Character
@@ -29,6 +28,24 @@ end
 end
 end
 end)
+
+idk:AddToggle({
+Name = "auto tp",
+Flag = "Autoe"
+})
+spawn(function()
+    while wait(0.1) do
+        if library.flags["Autoe"] then
+local Alive = game.Workspace[game.Players.LocalPlayer.Character.Name]:WaitForChild("HumanoidRootPart", 0.01)
+if Alive then
+game.Workspace[game.Players.LocalPlayer.Character.Name].HumanoidRootPart.CFrame = CFrame.new(197793.969, 20007.1035, 192644.969) 
+
+
+end
+end
+end
+end)
+
 
 
 idk:AddToggle({
@@ -42,7 +59,7 @@ for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
 if v:isA("Model") then 
 v.HumanoidRootPart.CanCollide = false
 v.HumanoidRootPart.Anchored = true
-v.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0, 0, 15))
+v.HumanoidRootPart.CFrame = CFrame.new(197793.969, 20007.1035, 192659.969)
 end
 end
 end
