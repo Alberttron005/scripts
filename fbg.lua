@@ -67,6 +67,21 @@ game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer("Dough","Buzzc
 end)
 
 FarmingSection:AddToggle({
+Name = "nika Farm",
+Flag = "Nika"
+})
+spawn(function()
+    while wait(0.5) do
+        if library.flags["Nika"] then 
+game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer("Nika","RocGun",{})
+game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer("Nika","NeoRedHawk",{})
+game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer("Nika","RocGatling",{})
+game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer("Nika","RedRoc",{})
+        end
+    end
+end)
+
+FarmingSection:AddToggle({
 Name = "Dragon Farm",
 Flag = "Dragon"
 })
@@ -116,4 +131,3 @@ end})
 for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Idled)) do
    v:Disable()
 end
-
