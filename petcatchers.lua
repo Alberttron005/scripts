@@ -1,9 +1,3 @@
-
-
-
-
-
-
 while wait(0.2) do
 game:GetService("ReplicatedStorage").Shared.Framework.Network.Remote.Event:FireServer("TryMinigameInput","1-1")
 game:GetService("ReplicatedStorage").Shared.Framework.Network.Remote.Event:FireServer("TryMinigameInput","1-2")
